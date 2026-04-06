@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display-wrap">
+            <div class="display-expr" id="expr"></div>
+            <input type="text" id="display" readonly value="0">
+        </div>
+        <div class="buttons">
+            <div class="sci-row">
+                <button onclick="sci('sin')">sin</button>
+                <button onclick="sci('cos')">cos</button>
+                <button onclick="sci('tan')">tan</button>
+                <button onclick="sci('log')">log</button>
+                <button onclick="sci('ln')">ln</button>
+                <button onclick="sci('fact')">n!</button>
+            </div>
+            <div class="sci-row">
+                <button onclick="sci('sqrt')">√</button>
+                <button onclick="sci('sq')">x²</button>
+                <button onclick="appendOp('^')">xʸ</button>
+                <button onclick="appendOp('(')">( </button>
+                <button onclick="appendOp(')')"> )</button>
+                <button onclick="appendOp('Math.PI')">π</button>
+            </div>
+            <div class="main-grid">
+                <button class="btn-clear" onclick="clearAll()">C</button>
+                <button class="btn-clear" onclick="delChar()">⌫</button>
+                <button class="btn-op" onclick="appendOp('%')">%</button>
+                <button class="btn-op" onclick="appendOp('/')">÷</button>
+                <button onclick="appendNum('7')">7</button>
+                <button onclick="appendNum('8')">8</button>
+                <button onclick="appendNum('9')">9</button>
+                <button class="btn-op" onclick="appendOp('*')">×</button>
+                <button onclick="appendNum('4')">4</button>
+                <button onclick="appendNum('5')">5</button>
+                <button onclick="appendNum('6')">6</button>
+                <button class="btn-op" onclick="appendOp('-')">−</button>
+                <button onclick="appendNum('1')">1</button>
+                <button onclick="appendNum('2')">2</button>
+                <button onclick="appendNum('3')">3</button>
+                <button class="btn-op" onclick="appendOp('+')">+</button>
+                <button class="btn-zero" onclick="appendNum('0')">0</button>
+                <button onclick="dot()">.</button>
+                <button class="btn-eq" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
